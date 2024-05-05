@@ -1,0 +1,80 @@
+.albums{
+    margin: 4rem 0;
+}
+
+.albums__title{
+    font-size: var(--title-2-fs);
+    font-weight: var(--title-fw);
+    margin-bottom: 1.5rem;
+}
+
+.albums__options{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 50px;
+    justify-content: space-between;
+}
+
+.albums__album{
+    flex-grow: 1;
+    /* min-width: 308px; */
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--gray-7);
+}
+
+.albums__album:hover > .albums__text{
+    background-color: var(--gray-6);
+}
+
+.album__img{
+    width: 100%;
+    height: 290px;
+    object-fit:cover;
+}
+
+.albums__text{
+    
+    padding: 0 1rem;
+}
+
+.album__title{
+    font-size: var(--title-3-fs);
+    font-weight: var(--title-fw);
+    padding: 15px 0;
+}
+
+.album__info{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: .8rem;
+}
+
+.album__band, .album__genre{
+    font-size: var(--title-4-fs);
+    font-weight: var(--title-2-fw);
+}
+
+.album__price{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    align-items: center;
+}
+
+.album__value{
+    font-size: 19.2px;
+    font-weight: var(--title-fw);
+}
+
+.album__btn{
+    background-color: var(--brand-2);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.album__btn:hover{
+    background-color: var(--brand-1);
+}

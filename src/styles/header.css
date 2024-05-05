@@ -1,0 +1,32 @@
+.purple{
+    color: var(--brand-1);
+}
+
+header{
+    position: fixed;
+    height: 9rem;
+    width:calc(100% - 8rem);
+    background-color:var(--gray-8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 3px var(--brand-2);
+    
+}
+
+.header__title{
+    font-size: var(--title-1-fs);
+    font-weight: var(--title-fw);
+    color: var(--gray-2);
+}
+
+.header__btn{
+    width: 2.5rem;
+    height: 2rem;
+    border: none;
+    border-radius: .5rem;
+    background-image: url(/src/assets/icons/moon-icon.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+

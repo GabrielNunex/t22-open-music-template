@@ -1,0 +1,37 @@
+.genre{
+    display: flex;
+    flex-direction: column;
+    padding: 180px 0 2rem 0;
+    gap: 2.5rem;
+}
+
+.genre__title{
+    font-size: var(--title-2-fs);
+    font-weight: var(--title-fw);
+    color: var(--gray-2);
+}
+
+.genre__optionsList{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.genre__option{
+    font-size: var(--text-fs);
+    font-weight: var(--text-fw);
+    color: var(--gray-3);
+    background-color: var(--gray-6);
+    padding: .5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid var(--gray-6);
+}
+
+.genre__option:hover{
+    border: 1px solid black;
+}
+
+.hover{
+    background-color: var(--gray-2);
+    color: var(--gray-7);
+}
