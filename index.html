@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/styles/reset.css">
     <link rel="stylesheet" href="./src/styles/globalStyles.css">
-    <script src="./src/scripts/index.js" defer></script>
+    <script type="module" src="./src/scripts/index.js" defer></script>
     <title>Open Music</title>
   </head>
   <body>
@@ -41,8 +41,7 @@
           <h2 class="price__title">Definir Preço</h2>
           <p class="price__limit">Até <span class="purple">R$ <span class="value">150</span></span></p>
         </div>
-        <input class="price__range" type="range" name="" value="150" min="0" max="400" onchange="changePrice(this.value)"
-        onmousemove="changePrice(this.value)">
+        <input class="price__range" type="range" name="" value="150" min="0" max="400">
       </section>
 
       <!-- SEÇÃO DE ALBUNS -->
@@ -50,7 +49,7 @@
         <!-- DESENVOLVA AQUI OS ELEMENTOS DA SEÇÃO -->
         <h2 class="albums__title">Albuns Encontrados</h2>
         <ul class="albums__options">
-          <li class="albums__album">
+          <!-- <li class="albums__album">
             <img src="./src/assets/imgs/cover-1.png" alt="Capa do albúm" class="album__img">
             <div class="albums__text">
               <h3 class="album__title">Acabou o Chorare</h3>
@@ -138,7 +137,7 @@
                 <button class="album__btn">Comprar</button>
               </div>
             </div>
-          </li>
+          </li> -->
         </ul>
 
       </section>
