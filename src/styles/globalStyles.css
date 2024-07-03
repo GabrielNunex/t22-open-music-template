@@ -35,3 +35,11 @@ body{
     font-family: var(--ff);
     background-color: var(--gray-8);
 }
+
+.dark-mode{
+    background-color:var(--gray-1);
+}
+
+.hidden{
+    display: none;
+}

@@ -2,6 +2,11 @@
     display: flex;
     flex-direction: column;
     margin: 2rem 0;
+    color: var(--gray-2);
+}
+
+.price-dark{
+    color: var(--gray-7);
 }
 
 .price__text{

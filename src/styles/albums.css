@@ -1,5 +1,10 @@
 .albums{
     margin: 4rem 0;
+    color: var(--gray-2);
+}
+
+.albums-dark{
+    color: var(--gray-6);
 }
 
 .albums__title{
@@ -23,8 +28,16 @@
     background-color: var(--gray-7);
 }
 
+.albums__album-dark{
+    background-color: var(--gray-2);
+}
+
 .albums__album:hover > .albums__text{
     background-color: var(--gray-6);
+}
+
+.albums__album-dark:hover > .albums__text{
+    background-color: var(--gray-1);
 }
 
 .album__img{

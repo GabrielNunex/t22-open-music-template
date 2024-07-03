@@ -1,7 +1,7 @@
 .genre{
     display: flex;
     flex-direction: column;
-    padding: 180px 0 2rem 0;
+    padding: 12rem 0 2rem 0;
     gap: 2.5rem;
 }
 
@@ -9,6 +9,10 @@
     font-size: var(--title-2-fs);
     font-weight: var(--title-fw);
     color: var(--gray-2);
+}
+
+.genre__title-dark{
+    color: var(--gray-7);
 }
 
 .genre__optionsList{
@@ -27,11 +31,22 @@
     border: 1px solid var(--gray-6);
 }
 
+.genre__option-dark{
+    color: var(--gray-6);
+    background-color: var(--gray-2);
+    border: 1px solid var(--gray-2);
+}
+
 .genre__option:hover{
     border: 1px solid black;
 }
 
-.hover{
+.genre__option__hover{
     background-color: var(--gray-2);
     color: var(--gray-7);
+}
+
+.genre__option__hover-dark{
+    background-color: var(--gray-7);
+    color: var(--gray-2);
 }

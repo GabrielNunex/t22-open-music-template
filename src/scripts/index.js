@@ -1,24 +1,29 @@
 import {applyInputRangeStyle} from './inputRange.js';
-import {albumList} from './albumsDatabase.js';
+// import {albumList} from './albumsDatabase.js';
+import {darkMode} from './theme.js';
+import {newList} from './api.js';
+const printList = await newList();
+// console.log(printList);
+// console.log(albumList);
 
 function routine (){
     applyInputRangeStyle();
-    upCards(albumList);
+    upCards(printList);
+    themeAnalisys();
 }
 routine ();
 
+//Criação dos albums
 function upCards(array) {
     const albumList = document.querySelector('.albums__options');
 
     for(let i = 0; i < array.length; i++){
-        console.log('certo' + i);
         const albumItem = creatCard(array[i]);
         albumList.append(albumItem);
     }
 }
 
 function creatCard(array) {
-    console.log('oi');
 const liAlbum = document.createElement('li');
 const imgCapa = document.createElement('img');
 const divInfo = document.createElement('div');
@@ -55,9 +60,11 @@ btnBuy.innerText = 'Comprar';
 return liAlbum;
 };
 
+//Filtro do preço
 const price = document.querySelector('.value');
 const priceRange = document.querySelector('.price__range');
 const genre = document.querySelectorAll('.genre__option');
+const albums = document.querySelectorAll('.albums__album');
 
 function changePrice(value){
     price.innerHTML = value;
@@ -66,19 +73,53 @@ function changePrice(value){
 priceRange.addEventListener ("input", (event) => {
     const currentInputValue = event.target.value;
     changePrice(currentInputValue);
-  });
-   
+    
+    for(let i = 0; i < albums.length; i++){
+        const albumPrice = parseFloat(albums[i].querySelector('.album__value').textContent);
+        console.log(currentInputValue);
+
+        if (albumPrice > currentInputValue) {
+            albums[i].classList.add('hidden')
+        } else {
+            albums[i].classList.remove('hidden')
+        }
+    }
+});
+
+
+
+//Estilização das abas de gênero
 function retirar() {
     const genre2 = [...document.querySelectorAll('.genre__option')]
    
     genre2.map((element)=>{
-    element.classList.remove('hover');
+    element.classList.remove('genre__option__hover');
     })
 };
    
 genre.forEach(element => {
     element.addEventListener("click", ()=> {
         retirar();
-        element.classList.toggle('hover');
+        element.classList.toggle('genre__option__hover');
     })
 });
+
+
+// DarkMode
+const btn = document.querySelector('#btn-dm');
+
+btn.addEventListener('click', () => {
+    darkMode();
+})
+
+function themeAnalisys(){
+    let dark = JSON.parse(localStorage.getItem("openMusic:theme"));
+    console.log(dark);
+    if (dark) {
+        darkMode();
+    }
+}
+
+
+
+
